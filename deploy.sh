@@ -1,8 +1,9 @@
 #!/bin/bash
 
 npm run build
+shopt -s extglob
 cd docs
-rm -v -r !("CNAME")
+rm -r !(CNAME)
 cd ..
 cp -R dist/* docs/
 
