@@ -6,4 +6,4 @@ cp -R dist/* docs/
 
 git add .
 git commit -m "deploy"
-git push
+git push -f
