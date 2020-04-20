@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Stayed tuened! The Website will soon be built :D</p>
+    <h1>Stayed tuened! The Website will soon be built :D</h1>
   </div>
 </template>
 
