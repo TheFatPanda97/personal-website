@@ -1,16 +1,33 @@
 <template>
     <v-app id="inspire">
         <v-app-bar app color="white">
-            <v-tabs color="rgb(233, 171, 0)" centered show-arrows>
-                <v-tab v-for="tabName in tabs" :key="tabName">
-                    {{ tabName }}
+            <v-tabs
+                color="rgb(233, 171, 0)"
+                centered
+                show-arrows
+                v-model="selectedTab"
+            >
+                <v-tab
+                    v-for="tab in tabs"
+                    :key="tab.id"
+                    @click="scrollTo(tab.id)"
+                >
+                    {{ tab.name }}
                 </v-tab>
             </v-tabs>
         </v-app-bar>
 
         <v-content>
-            <home id="home"></home>
-            <about-me id="about-me"></about-me>
+            <v-responsive>
+                <div id="home">
+                    <div v-intersect.quiet="onIntersect"></div>
+                    <home></home>
+                </div>
+                <div id="about-me">
+                    <div v-intersect.quiet="onIntersect"></div>
+                    <about-me></about-me>
+                </div>
+            </v-responsive>
         </v-content>
     </v-app>
 </template>
@@ -22,12 +39,36 @@ import aboutMe from "./components/aboutMe";
 export default {
     data() {
         return {
-            tabs: ["Home", "About Me", "About Me", "About Me", "About Me", "About Me", "About Me"],
+            selectedTab: 0,
+            tabs: [
+                { id: "#home", name: "Home" },
+                { id: "#about-me", name: "About Me" },
+            ],
+            options: {
+                duration: 500,
+                easing: "easeOutCubic",
+            },
         };
     },
     components: {
         home,
         "about-me": aboutMe,
+    },
+    methods: {
+        scrollTo(tabId) {
+            this.$vuetify.goTo(tabId, this.options);
+        },
+        onIntersect(entries) {
+            if (entries[0].isIntersecting) {
+                let currID = "#" + entries[0].target.parentNode.id;
+                for (let i = 0; i < this.tabs.length; i++) {
+                    if (this.tabs[i].id == currID) {
+                        this.selectedTab = i;
+                        return;
+                    }
+                }
+            }
+        },
     },
 };
 </script>
