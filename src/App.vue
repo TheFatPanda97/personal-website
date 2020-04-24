@@ -29,6 +29,11 @@
                 </div>
             </v-responsive>
         </v-content>
+        <v-footer
+            flat
+            tile
+            class="indigo lighten-1 white--text text-center"
+        >More content will be displayed here</v-footer>
     </v-app>
 </template>
 
