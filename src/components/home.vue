@@ -20,12 +20,22 @@
                     style="margin: 20px;"
                     color="rgb(255, 187, 0)"
                     depressed
+                    @click="viewWorkFn('#about-me')"
                 >
                     VIEW MY WORK
                 </v-btn>
             </div>
         </v-parallax>
 </template>
+
+<script>
+export default {
+    props: {
+        viewWorkFn: Function
+    }
+}
+</script>
+
 
 <style scoped>
 html {

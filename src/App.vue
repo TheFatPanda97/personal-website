@@ -21,7 +21,7 @@
             <v-responsive>
                 <div id="home">
                     <div v-intersect.quiet="onIntersect"></div>
-                    <home></home>
+                    <home :viewWorkFn="scrollTo"></home>
                 </div>
                 <div id="about-me">
                     <div v-intersect.quiet="onIntersect"></div>
@@ -29,11 +29,9 @@
                 </div>
             </v-responsive>
         </v-content>
-        <v-footer
-            flat
-            tile
-            class="indigo lighten-1 white--text text-center"
-        >More content will be displayed here</v-footer>
+        <v-footer flat tile class="indigo lighten-1 white--text text-center"
+            >More content will be displayed here</v-footer
+        >
     </v-app>
 </template>
 
@@ -61,6 +59,12 @@ export default {
     },
     methods: {
         scrollTo(tabId) {
+            for (let i = 0; i < this.tabs.length; i++) {
+                if (this.tabs[i].id == tabId) {
+                    this.selectedTab = i;
+                    break;
+                }
+            }
             this.$vuetify.goTo(tabId, this.options);
         },
         onIntersect(entries) {
