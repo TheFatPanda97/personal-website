@@ -21,11 +21,15 @@
             <v-responsive>
                 <div id="home">
                     <div v-intersect.quiet="onIntersect"></div>
-                    <home :viewWorkFn="scrollTo"></home>
+                    <home-view :viewWorkFn="scrollTo"></home-view>
                 </div>
                 <div id="about-me">
                     <div v-intersect.quiet="onIntersect"></div>
-                    <about-me></about-me>
+                    <about-me-view></about-me-view>
+                </div>
+                <div id="projects">
+                    <div v-intersect.quiet="onIntersect"></div>
+                    <projects-view></projects-view>
                 </div>
             </v-responsive>
         </v-content>
@@ -36,8 +40,9 @@
 </template>
 
 <script>
-import home from "./components/home";
-import aboutMe from "./components/aboutMe";
+import Home from "./components/Home";
+import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
 
 export default {
     data() {
@@ -46,6 +51,7 @@ export default {
             tabs: [
                 { id: "#home", name: "Home" },
                 { id: "#about-me", name: "About Me" },
+                { id: "#projects", name: "Projects" },
             ],
             options: {
                 duration: 500,
@@ -54,8 +60,9 @@ export default {
         };
     },
     components: {
-        home,
-        "about-me": aboutMe,
+        "home-view": Home,
+        "about-me-view": AboutMe,
+        "projects-view": Projects
     },
     methods: {
         scrollTo(tabId) {

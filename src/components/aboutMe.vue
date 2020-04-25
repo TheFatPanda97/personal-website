@@ -1,5 +1,5 @@
 <template>
-    <div style="margin-top: 20px; margin-bottom: 20px;">
+    <div class="about-page">
         <v-row>
             <v-col>
                 <h1 class="about-title">About Me</h1>
@@ -7,10 +7,10 @@
         </v-row>
         <v-row style="padding-right: 50px; padding-left: 50px">
             <v-col>
-                    <v-img
-                        src="../assets/about-me-photo.png"
-                        style="width: 300px; margin: auto;"
-                    ></v-img>
+                <v-img
+                    :src="require('../assets/about-me-photo.png')"
+                    style="width: 300px; margin: auto;"
+                ></v-img>
             </v-col>
             <v-col align-self="center">
                 <p class="about-content">
@@ -30,14 +30,15 @@
                     However, my proudest title would have to be a
                     <strong>problem solver</strong>. As a computer science
                     student at the University of Toronto, this could not have
-                    been a better compliement.
+                    been a better compliment.
 
                     <br />
                     <br />
 
                     The purpose of this website is to provide an overview of who
-                    I am and what I have done. Please feel free to explore
-                    around and make any suggestion you may have.
+                    I am and what I have done. I will also be updating it with
+                    new projects. Please feel free to explore and make any
+                    suggestions you have.
 
                     <br />
                     <br />
@@ -50,6 +51,10 @@
 </template>
 
 <style scoped>
+.about-page {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .about-title {
     text-align: center;
     font-size: 50px;

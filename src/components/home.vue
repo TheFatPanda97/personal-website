@@ -20,7 +20,7 @@
                     style="margin: 20px;"
                     color="rgb(255, 187, 0)"
                     depressed
-                    @click="viewWorkFn('#about-me')"
+                    @click="viewWorkFn('#projects')"
                 >
                     VIEW MY WORK
                 </v-btn>
