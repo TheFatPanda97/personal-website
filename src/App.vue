@@ -1,6 +1,6 @@
 <template>
     <v-app id="inspire">
-        <v-app-bar app color="white">
+        <v-app-bar app color="white" hide-on-scroll>
             <v-tabs
                 color="rgb(233, 171, 0)"
                 centered
