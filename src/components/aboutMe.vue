@@ -5,17 +5,14 @@
                 <h1 class="about-title">About Me</h1>
             </v-col>
         </v-row>
-        <v-row style="padding-right: 50px; padding-left: 50px" align="center">
+        <v-row style="padding-right: 50px; padding-left: 50px">
             <v-col>
-                <div style="text-align: center;">
-                    <img
+                    <v-img
                         src="../assets/about-me-photo.png"
-                        width="40%"
-                        style="min-width:300px"
-                    />
-                </div>
+                        style="width: 300px; margin: auto;"
+                    ></v-img>
             </v-col>
-            <v-col>
+            <v-col align-self="center">
                 <p class="about-content">
                     Hi there, my name is Yingxiaoyang Hu, but you can call me
                     Shawn.
@@ -45,7 +42,7 @@
                     <br />
                     <br />
 
-                   Hopefully, my work will intrigue you. 😀
+                    Hopefully, my work will intrigue you. 😀
                 </p>
             </v-col>
         </v-row>
@@ -63,7 +60,7 @@
     margin-left: auto;
     margin-right: auto;
     width: auto;
-    min-width: 300px;
+    min-width: 200px;
     word-wrap: break-word;
 }
 </style>
