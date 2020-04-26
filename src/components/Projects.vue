@@ -56,7 +56,7 @@ export default {
                 {
                     title: "Isomo",
                     description:
-                        "A startup aiming to eliminate the biases (e.g. Race, gender) in the hiring process. On this platform, only your skills matter.",
+                        "A startup aiming to eliminate the biases (e.g. race, gender) in the hiring process. On this platform, only your skills matter.",
                     imgSrc:
                         "https://raw.githubusercontent.com/TheFatPanda97/personal-website/master/src/assets/network.jpg",
                     repoLink: "https://github.com/TheFatPanda97/isomo",
@@ -73,7 +73,7 @@ export default {
                 {
                     title: "Skip The Wait",
                     description:
-                        "A hackathon project me and a few friends built attempting to solve the wait time issue at hospitals.",
+                        "A hackathon project a few friends and I built attempting to solve the wait time issue at hospitals.",
                     imgSrc:
                         "https://raw.githubusercontent.com/TheFatPanda97/Skip-The-Wait/master/dashboard.PNG",
                     repoLink:
