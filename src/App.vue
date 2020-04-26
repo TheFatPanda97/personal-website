@@ -33,9 +33,28 @@
                 </div>
             </v-responsive>
         </v-content>
-        <v-footer flat tile class="indigo lighten-1 white--text text-center"
-            >More content will be displayed here</v-footer
-        >
+        <v-footer flat tile padless app>
+            <v-card
+                flat
+                tile
+                width="100%"
+                color="rgb(255, 187, 0)"
+                class="text-center"
+            >
+                <v-card-text>
+                    <v-btn
+                        v-for="icon in icons"
+                        :key="icon.name"
+                        icon
+                        class="mx-4"
+                        color="black"
+                        :href="icon.link"
+                    >
+                        <v-icon large>{{ icon.name }}</v-icon>
+                    </v-btn>
+                </v-card-text>
+            </v-card>
+        </v-footer>
     </v-app>
 </template>
 
@@ -57,12 +76,22 @@ export default {
                 duration: 500,
                 easing: "easeOutCubic",
             },
+            icons: [
+                {
+                    name: "mdi-github",
+                    link: "https://github.com/TheFatPanda97",
+                },
+                {
+                    name: "mdi-linkedin",
+                    link: "https://www.linkedin.com/in/shawn-hu/",
+                },
+            ],
         };
     },
     components: {
         "home-view": Home,
         "about-me-view": AboutMe,
-        "projects-view": Projects
+        "projects-view": Projects,
     },
     methods: {
         scrollTo(tabId) {
