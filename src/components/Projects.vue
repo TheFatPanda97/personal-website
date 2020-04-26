@@ -13,7 +13,7 @@
                 sm="5"
                 md="6"
                 lg="4"
-                xl="1"
+                xl="9"
             >
                 <project-card :cardInfo="currCardInfo"></project-card>
             </v-col>
@@ -31,7 +31,7 @@ export default {
                 {
                     title: "UofT Course Tools",
                     description:
-                        "Unifying UofT's course data, and using it to build tools such as a course guide and timetable planner.",
+                        "We are unifying UofT's course data, and using it to build tools such as a course guide and timetable planner.",
                     imgSrc:
                         "https://raw.githubusercontent.com/UTM-Hacklab/UofTCourseTools/master/packages/docs/course-guide/figma_pic.png",
                     repoLink: "https://github.com/UTM-Hacklab/UofTCourseTools",
@@ -73,7 +73,7 @@ export default {
                 {
                     title: "Skip The Wait",
                     description:
-                        "A hackathon project me and a few friends built in order to solve the wait times at hosptials.",
+                        "A hackathon project me and a few friends built attempting to solve the wait time issue at hospitals.",
                     imgSrc:
                         "https://raw.githubusercontent.com/TheFatPanda97/Skip-The-Wait/master/dashboard.PNG",
                     repoLink:

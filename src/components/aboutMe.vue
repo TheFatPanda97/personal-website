@@ -25,9 +25,9 @@
                     <br />
                     <br />
 
-                    Other than my name, I've been called many things, a dreamer,
-                    an ambitious person, and most recently, an entrepreneur.
-                    However, my proudest title would have to be a
+                    Other than my name, I've been called many other things, a
+                    dreamer, an ambitious person, and most recently, an
+                    entrepreneur. However, my proudest title would have to be a
                     <strong>problem solver</strong>. As a computer science
                     student at the University of Toronto, this could not have
                     been a better compliment.
