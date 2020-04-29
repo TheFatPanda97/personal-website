@@ -58,7 +58,7 @@ export default {
                     description:
                         "The repository that contains the source file I used to build this website. He didn't use webflow or wix? What is he, insane?",
                     imgSrc:
-                        "https://raw.githubusercontent.com/TheFatPanda97/personal-website/master/src/assets/intro-background.png",
+                        "https://raw.githubusercontent.com/TheFatPanda97/personal-website/master/src/assets/intro-background-light.png",
                     repoLink:
                         "https://github.com/TheFatPanda97/personal-website",
                 },
