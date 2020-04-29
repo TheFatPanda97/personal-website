@@ -1,8 +1,14 @@
 <template>
-    <div class="about-page">
+    <div :class="dark == false ? 'about-page-light' : 'about-page-dark'">
         <v-row>
             <v-col>
-                <h1 class="about-title">About Me</h1>
+                <h1
+                    :class="
+                        dark == false ? 'about-title-light' : 'about-title-dark'
+                    "
+                >
+                    About Me
+                </h1>
             </v-col>
         </v-row>
         <v-row style="padding-right: 50px; padding-left: 50px">
@@ -13,7 +19,7 @@
                 ></v-img>
             </v-col>
             <v-col align-self="center">
-                <p class="about-content">
+                <p :class="dark==false ? 'about-content-light' : 'about-content-dark'">
                     Hi there, my name is Yingxiaoyang Hu, but you can call me
                     Shawn.
 
@@ -50,17 +56,46 @@
     </div>
 </template>
 
+<script>
+export default {
+    props: {
+        dark: Boolean,
+    },
+};
+</script>
+
 <style scoped>
-.about-page {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.about-page-dark {
+    padding: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(18, 18, 18);
 }
-.about-title {
+.about-page-light {
+    padding: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+.about-title-dark {
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+    color: white;
+}
+.about-title-light {
     text-align: center;
     font-size: 50px;
     margin: 10px;
 }
-.about-content {
+.about-content-dark {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    min-width: 200px;
+    word-wrap: break-word;
+    color: white;
+}
+.about-content-light {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;

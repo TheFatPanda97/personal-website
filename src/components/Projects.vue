@@ -1,8 +1,19 @@
 <template>
-    <v-container fluid class="projects-page">
+    <v-container
+        fluid
+        :class="dark == false ? 'projects-page-light' : 'projects-page-dark'"
+    >
         <v-row>
             <v-col>
-                <h1 class="projects-title">Projects</h1>
+                <h1
+                    :class="
+                        dark == false
+                            ? 'projects-title-light'
+                            : 'projects-title-dark'
+                    "
+                >
+                    Projects
+                </h1>
             </v-col>
         </v-row>
         <v-row justify="center">
@@ -15,7 +26,10 @@
                 lg="4"
                 xl="9"
             >
-                <project-card :cardInfo="currCardInfo"></project-card>
+                <project-card
+                    :cardInfo="currCardInfo"
+                    :dark="dark"
+                ></project-card>
             </v-col>
         </v-row>
     </v-container>
@@ -25,6 +39,9 @@
 import ProjectCard from "./ProjectCard";
 
 export default {
+    props: {
+        dark: Boolean,
+    },
     data() {
         return {
             allCardInfo: [
@@ -67,8 +84,7 @@ export default {
                         "Do you love Naruto and Mortal Kombat? Well this is a fighting game where Anime characters fight each other.",
                     imgSrc:
                         "https://raw.githubusercontent.com/TheFatPanda97/Fight-Club/master/main-menu.PNG",
-                    repoLink:
-                        "https://github.com/TheFatPanda97/Fight-Club",
+                    repoLink: "https://github.com/TheFatPanda97/Fight-Club",
                 },
                 {
                     title: "Skip The Wait",
@@ -76,8 +92,7 @@ export default {
                         "A hackathon project a few friends and I built attempting to solve the wait time issue at hospitals.",
                     imgSrc:
                         "https://raw.githubusercontent.com/TheFatPanda97/Skip-The-Wait/master/dashboard.PNG",
-                    repoLink:
-                        "https://github.com/TheFatPanda97/Skip-The-Wait",
+                    repoLink: "https://github.com/TheFatPanda97/Skip-The-Wait",
                 },
             ],
         };
@@ -89,11 +104,19 @@ export default {
 </script>
 
 <style scoped>
-.projects-page {
-    margin-top: 20px;
+.projects-page-dark {
+    background-color: rgb(18, 18, 18);
+}
+.projects-page-light {
     background-color: rgb(251, 251, 251);
 }
-.projects-title {
+.projects-title-dark {
+    text-align: center;
+    font-size: 50px;
+    margin: 10px;
+    color: white;
+}
+.projects-title-light {
     text-align: center;
     font-size: 50px;
     margin: 10px;
