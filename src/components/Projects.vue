@@ -76,7 +76,7 @@ export default {
                         "A startup aiming to eliminate the biases (e.g. race, gender) in the hiring process. On this platform, only your skills matter.",
                     imgSrc:
                         "https://raw.githubusercontent.com/TheFatPanda97/personal-website/master/src/assets/network.jpg",
-                    repoLink: "https://github.com/TheFatPanda97/isomo",
+                    repoLink: "https://github.com/Isomo-Recruitment",
                 },
                 {
                     title: "Fight Club",
@@ -87,11 +87,11 @@ export default {
                     repoLink: "https://github.com/TheFatPanda97/Fight-Club",
                 },
                 {
-                    title: "Skip The Wait",
+                    title: "Personal Expense Tracker",
                     description:
-                        "A hackathon project a few friends and I built attempting to solve the wait time issue at hospitals.",
+                        "A personal expense tracker built using Flutter. Haven't figured out how to store the data locally yet 😅.",
                     imgSrc:
-                        "https://raw.githubusercontent.com/TheFatPanda97/Skip-The-Wait/master/dashboard.PNG",
+                        "https://raw.githubusercontent.com/TheFatPanda97/personal-expense-tracker/master/assets/images/demo.png",
                     repoLink: "https://github.com/TheFatPanda97/Skip-The-Wait",
                 },
             ],
