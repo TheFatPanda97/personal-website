@@ -1,15 +1,28 @@
-import Vue from 'vue'
-import App from './App.vue'
-import vuetify from './plugins/vuetify';
-import VueAnalytics from 'vue-analytics';
+import Vue from "vue";
+import App from "./App.vue";
+import View from "./View.vue";
+import vuetify from "./plugins/vuetify";
+import VueAnalytics from "vue-analytics";
+import VueRouter from "vue-router";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+Vue.use(VueRouter);
+
+const routes = [{ path: "/", component: View }];
+
+const router = new VueRouter({
+  routes,
+  mode: "history",
+});
 
 Vue.use(VueAnalytics, {
-  id: 'UA-165919387-1'
+  id: "UA-165919387-1",
+  router,
 });
 
 new Vue({
   vuetify,
-  render: h => h(App)
-}).$mount('#app')
+  router,
+  render: (h) => h(App),
+}).$mount("#app");
