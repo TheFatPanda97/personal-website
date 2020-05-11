@@ -1,4 +1,4 @@
-# personal-website
+# Shawn's Portfolio
 
 ## Project setup
 ```
