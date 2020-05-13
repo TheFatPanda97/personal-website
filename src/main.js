@@ -4,9 +4,11 @@ import View from "./View.vue";
 import vuetify from "./plugins/vuetify";
 import VueAnalytics from "vue-analytics";
 import VueRouter from "vue-router";
+import VueMobileDetection from "vue-mobile-detection";
 
 Vue.config.productionTip = false;
 
+Vue.use(VueMobileDetection);
 Vue.use(VueRouter);
 
 const routes = [{ path: "/", component: View }];

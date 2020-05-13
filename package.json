@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-analytics": "^5.22.1",
+    "vue-mobile-detection": "^1.0.0",
     "vue-mousefollower": "0.0.1",
     "vue-router": "^3.1.6",
     "vuetify": "^2.2.27"
