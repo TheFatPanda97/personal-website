@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <v-app-bar v-if="dark == false" color="white" app hide-on-scroll>
+        <v-app-bar v-if="!dark" color="white" app hide-on-scroll>
             <v-tabs
                 color="rgb(233, 171, 0)"
                 centered
@@ -79,7 +79,7 @@
                         @click="toggleMode()"
                     >
                         <v-icon large>{{
-                            dark == false
+                            !dark
                                 ? "mdi-brightness-6"
                                 : "mdi-brightness-4"
                         }}</v-icon>

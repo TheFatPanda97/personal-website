@@ -1,5 +1,5 @@
 <template>
-    <v-card v-if="dark == false" class="mx-auto">
+    <v-card v-if="!dark" class="mx-auto">
         <v-img
             class="white--text align-end"
             height="200px"
