@@ -40,7 +40,7 @@
             block
             outlined
             :loading="loading"
-            style="margin-bottom: 40px"
+            style="margin-top: 10px;margin-bottom: 40px"
             @click="submit"
           >
             Submit
@@ -107,7 +107,7 @@ export default {
         );
       }
     },
-    
+
     resetForm() {
       this.$refs.form.reset();
       this.$refs.form.resetValidation();
