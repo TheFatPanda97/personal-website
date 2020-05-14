@@ -5,16 +5,14 @@
   >
     <v-row>
       <v-col>
-        <h1
-          :class="!dark ? 'contact-title-light' : 'contact-title-dark'"
-        >
+        <h1 :class="!dark ? 'contact-title-light' : 'contact-title-dark'">
           Contact Me
         </h1>
       </v-col>
     </v-row>
-    <v-form v-model="valid">
+    <v-form v-model="valid" ref="form">
       <v-row justify="center" align="center">
-        <v-col cols="12" lg="2" sm="3">
+        <v-col cols="12" lg="5" sm="8">
           <v-text-field
             :dark="dark"
             v-model="name"
@@ -22,8 +20,6 @@
             :rules="nameRules"
             required
           ></v-text-field>
-        </v-col>
-        <v-col cols="12" lg="2" sm="5">
           <v-text-field
             :dark="dark"
             v-model="email"
@@ -31,10 +27,6 @@
             label="Email *"
             required
           ></v-text-field>
-        </v-col>
-      </v-row>
-      <v-row justify="center" align="center">
-        <v-col cols="12" lg="4" sm="8">
           <v-textarea
             label="Message *"
             :rules="messageRules"
@@ -42,22 +34,26 @@
             required
             :dark="dark"
           ></v-textarea>
-        </v-col>
-      </v-row>
-      <v-row justify="center" align="center">
-        <v-col cols="12" lg="4" sm="8">
           <v-btn
             :dark="dark"
             depressed
             block
             outlined
+            :loading="loading"
             style="margin-bottom: 40px"
             @click="submit"
-            >Submit</v-btn
           >
+            Submit
+          </v-btn>
         </v-col>
       </v-row>
     </v-form>
+    <v-snackbar v-model="snackbar">
+      {{ submitText }}
+      <v-btn color="pink" text @click="snackbar = false">
+        Close
+      </v-btn>
+    </v-snackbar>
   </v-container>
 </template>
 
@@ -68,7 +64,10 @@ export default {
   },
   data() {
     return {
+      snackbar: false,
+      loading: false,
       valid: false,
+      submitText: "Hello",
       name: "",
       email: "",
       message: "",
@@ -82,22 +81,36 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.valid);
       var data = {
         name: this.name,
         email: this.email,
         message: this.message,
       };
-      window.Pageclip.send(
-        "qp33AtF18MuhmuxFn1gHpkWWCzCpRXqh",
-        "contact-form",
-        data,
-        function(error, response) {
-          console.log(error.message);
 
-          console.log(response);
-        }
-      );
+      if (this.valid) {
+        this.loading = true;
+        var vm = this;
+        window.Pageclip.send(
+          "qp33AtF18MuhmuxFn1gHpkWWCzCpRXqh",
+          "contact-form",
+          data,
+          (error) => {
+            vm.loading = false;
+            if (error == null) {
+              vm.submitText = "Message sent, thanks 😄";
+              this.resetForm();
+            } else {
+              vm.submitText = "Something went wrong 😓";
+            }
+            vm.snackbar = true;
+          }
+        );
+      }
+    },
+    
+    resetForm() {
+      this.$refs.form.reset();
+      this.$refs.form.resetValidation();
     },
   },
 };
