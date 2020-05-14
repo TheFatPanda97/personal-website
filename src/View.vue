@@ -48,6 +48,9 @@
                     <div v-intersect.quiet="onIntersect"></div>
                     <projects-view :dark="dark"></projects-view>
                 </div>
+                <div id="contact-me">
+                    <contact-me-view :dark="dark"></contact-me-view>
+                </div>
             </v-responsive>
         </v-content>
         <v-footer flat tile padless app>
@@ -91,6 +94,7 @@
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
+import ContactMe from "./components/ContactMe"
 
 export default {
     data() {
@@ -100,6 +104,7 @@ export default {
                 { id: "#home", name: "Home" },
                 { id: "#about-me", name: "About Me" },
                 { id: "#projects", name: "Projects" },
+                { id: "#contact-me", name: "Contact Me" },
             ],
             options: {
                 duration: 500,
@@ -122,8 +127,10 @@ export default {
         "home-view": Home,
         "about-me-view": AboutMe,
         "projects-view": Projects,
+        "contact-me-view": ContactMe,
     },
     methods: {
+
         scrollTo(tabId) {
             for (let i = 0; i < this.tabs.length; i++) {
                 if (this.tabs[i].id == tabId) {

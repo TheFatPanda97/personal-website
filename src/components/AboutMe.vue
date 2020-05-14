@@ -1,5 +1,8 @@
 <template>
-    <div :class="dark == false ? 'about-page-light' : 'about-page-dark'">
+    <v-container
+        fluid
+        :class="dark == false ? 'about-page-light' : 'about-page-dark'"
+    >
         <v-row>
             <v-col>
                 <h1
@@ -19,7 +22,13 @@
                 ></v-img>
             </v-col>
             <v-col align-self="center">
-                <p :class="dark==false ? 'about-content-light' : 'about-content-dark'">
+                <p
+                    :class="
+                        dark == false
+                            ? 'about-content-light'
+                            : 'about-content-dark'
+                    "
+                >
                     Hi there, my name is Yingxiaoyang Hu, but you can call me
                     Shawn.
 
@@ -53,7 +62,7 @@
                 </p>
             </v-col>
         </v-row>
-    </div>
+    </v-container>
 </template>
 
 <script>
