@@ -69,6 +69,7 @@
                         class="mx-4"
                         color="black"
                         :href="icon.link"
+                        target="_blank"
                     >
                         <v-icon large>{{ icon.name }}</v-icon>
                     </v-btn>
