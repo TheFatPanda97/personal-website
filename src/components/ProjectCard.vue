@@ -13,7 +13,12 @@
         </v-card-text>
 
         <v-card-actions>
-            <v-btn color="rgb(255, 187, 0)" text :href="cardInfo.repoLink">
+            <v-btn
+                color="rgb(255, 187, 0)"
+                text
+                :href="cardInfo.repoLink"
+                target="_blank"
+            >
                 Visit Repository
             </v-btn>
         </v-card-actions>
@@ -32,8 +37,14 @@
             {{ cardInfo.description }}
         </v-card-text>
 
+
         <v-card-actions>
-            <v-btn color="rgb(255, 187, 0)" text :href="cardInfo.repoLink">
+            <v-btn
+                color="rgb(255, 187, 0)"
+                text
+                :href="cardInfo.repoLink"
+                target="_blank"
+            >
                 Visit Repository
             </v-btn>
         </v-card-actions>

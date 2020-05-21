@@ -84,6 +84,14 @@ export default {
             "https://raw.githubusercontent.com/TheFatPanda97/personal_expense_tracker/master/assets/images/demo.png",
           repoLink: "https://github.com/TheFatPanda97/personal_expense_tracker",
         },
+        {
+          title: "Weatherman",
+          description:
+            "Tired of looking at weather on all those fancy websites? Here is a dead simple app that gives you weather the forecast.",
+          imgSrc:
+            "https://images.unsplash.com/photo-1508697014387-db70aad34f4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
+          repoLink: "https://github.com/TheFatPanda97/weatherman",
+        },
       ],
     };
   },

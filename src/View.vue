@@ -80,9 +80,7 @@
                         @click="toggleMode()"
                     >
                         <v-icon large>{{
-                            !dark
-                                ? "mdi-brightness-6"
-                                : "mdi-brightness-4"
+                            !dark ? "mdi-brightness-6" : "mdi-brightness-4"
                         }}</v-icon>
                     </v-btn>
                 </v-card-text>
@@ -95,7 +93,7 @@
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
-import ContactMe from "./components/ContactMe"
+import ContactMe from "./components/ContactMe";
 
 export default {
     data() {
@@ -131,7 +129,6 @@ export default {
         "contact-me-view": ContactMe,
     },
     methods: {
-
         scrollTo(tabId) {
             for (let i = 0; i < this.tabs.length; i++) {
                 if (this.tabs[i].id == tabId) {
