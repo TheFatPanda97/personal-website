@@ -21,6 +21,15 @@
             >
                 Visit Repository
             </v-btn>
+            <v-btn
+                v-if="cardInfo.websiteLink"
+                color="rgb(255, 187, 0)"
+                text
+                :href="cardInfo.websiteLink"
+                target="_blank"
+            >
+                Visit Website
+            </v-btn>
         </v-card-actions>
     </v-card>
 
@@ -37,7 +46,6 @@
             {{ cardInfo.description }}
         </v-card-text>
 
-
         <v-card-actions>
             <v-btn
                 color="rgb(255, 187, 0)"
@@ -46,6 +54,15 @@
                 target="_blank"
             >
                 Visit Repository
+            </v-btn>
+            <v-btn
+                v-if="cardInfo.websiteLink"
+                color="rgb(255, 187, 0)"
+                text
+                :href="cardInfo.websiteLink"
+                target="_blank"
+            >
+                Visit Website
             </v-btn>
         </v-card-actions>
     </v-card>

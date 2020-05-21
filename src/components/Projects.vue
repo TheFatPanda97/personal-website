@@ -91,6 +91,7 @@ export default {
           imgSrc:
             "https://images.unsplash.com/photo-1508697014387-db70aad34f4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
           repoLink: "https://github.com/TheFatPanda97/weatherman",
+          websiteLink: "https://hu-weatherman.herokuapp.com/"
         },
       ],
     };
