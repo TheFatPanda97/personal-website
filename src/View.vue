@@ -33,7 +33,7 @@
                 <contact-me-view :dark="dark"></contact-me-view>
             </div>
         </v-responsive>
-        
+
         <v-footer flat tile padless app>
             <v-card flat tile width="100%" color="rgb(255, 187, 0)" class="text-center">
                 <v-card-text>
@@ -89,7 +89,7 @@ export default {
                     link: "https://www.linkedin.com/in/shawn-hu/",
                 },
             ],
-            dark: false,
+            dark: window.matchMedia('(prefers-color-scheme: dark)').matches,
         };
     },
     components: {
