@@ -34,7 +34,6 @@
             </v-tabs>
         </v-app-bar>
 
-        <v-content>
             <v-responsive>
                 <div id="home">
                     <div v-intersect.quiet="onIntersect"></div>
@@ -52,7 +51,6 @@
                     <contact-me-view :dark="dark"></contact-me-view>
                 </div>
             </v-responsive>
-        </v-content>
         <v-footer flat tile padless app>
             <v-card
                 flat
