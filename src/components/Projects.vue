@@ -83,14 +83,6 @@ export default {
                     repoLink: "https://github.com/TheFatPanda97/weatherman",
                     websiteLink: "https://hu-weatherman.herokuapp.com/",
                 },
-                {
-                    title: "Personal Expense Tracker",
-                    description:
-                        "A personal expense tracker built using Flutter. Haven't figured out how to store the data locally yet 😅.",
-                    imgSrc:
-                        "https://raw.githubusercontent.com/TheFatPanda97/personal_expense_tracker/master/assets/images/demo.png",
-                    repoLink: "https://github.com/TheFatPanda97/personal_expense_tracker",
-                },
             ],
         };
     },
