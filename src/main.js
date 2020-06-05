@@ -11,20 +11,23 @@ Vue.config.productionTip = false;
 Vue.use(VueMobileDetection);
 Vue.use(VueRouter);
 
-const routes = [{ path: "/", component: View }];
+const routes = [
+    { path: "/", name: "home", component: View },
+    { path: "*", redirect: { name: "home" } },
+];
 
 const router = new VueRouter({
-  routes,
-  mode: "history",
+    routes,
+    mode: "history",
 });
 
 Vue.use(VueAnalytics, {
-  id: "UA-165919387-1",
-  router,
+    id: "UA-165919387-1",
+    router,
 });
 
 new Vue({
-  vuetify,
-  router,
-  render: (h) => h(App),
+    vuetify,
+    router,
+    render: (h) => h(App),
 }).$mount("#app");
