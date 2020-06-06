@@ -11,7 +11,7 @@ module.exports = {
       renderRoutes: [
         '/'
       ],
-      useRenderEventtrue,
+      useRenderEvent: false,
       onlyProduction: true
     }
   }
