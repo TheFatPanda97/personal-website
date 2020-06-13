@@ -34,12 +34,11 @@ export default {
         return {
             allCardInfo: [
                 {
-                    title: "UofT Course Tools",
+                    title: "VIAplanner",
                     description:
-                        "We are unifying UofT's course data, and using it to build tools such as a course guide and timetable planner.",
-                    imgSrc:
-                        "https://raw.githubusercontent.com/UTM-Hacklab/UofTCourseTools/master/packages/docs/course-guide/figma_pic.png",
-                    repoLink: "https://github.com/UTM-Hacklab/UofTCourseTools",
+                        "VIAplanner is a tool designed by students at the University of Toronto to help the community. We desire to enhance the course selection process.",
+                    imgSrc: require("../assets/viaplanner.gif"),
+                    repoLink: "https://github.com/UTM-Hacklab/VIAplanner",
                 },
                 {
                     title: "Shawn's Portfolio",
