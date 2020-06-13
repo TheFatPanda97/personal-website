@@ -39,6 +39,7 @@ export default {
                         "VIAplanner is a tool designed by students at the University of Toronto to help the community. We desire to enhance the course selection process.",
                     imgSrc: require("../assets/viaplanner.gif"),
                     repoLink: "https://github.com/UTM-Hacklab/VIAplanner",
+                    websiteLink: "https://viaplanner.ca/",
                 },
                 {
                     title: "Shawn's Portfolio",
