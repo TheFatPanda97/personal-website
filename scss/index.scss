@@ -1,7 +1,14 @@
-// global styling
+// tailwind styling
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+// global styling
+@import "./common/breakpoints";
+@import "./common/colors";
+@import "./common/global";
+
 
 // component styling
+
+
