@@ -17,6 +17,8 @@ interface ISideButton {
   focused: boolean;
   description?: string;
   hideHighlight?: boolean;
+  bottomButton?: boolean;
+  className?: string;
 }
 
 const SideButton = ({
@@ -25,24 +27,30 @@ const SideButton = ({
   focused,
   description,
   hideHighlight,
+  bottomButton,
+  className,
 }: ISideButton): JSX.Element => {
   return (
     <div className="side-button-container flex items-center" onClick={onClick}>
       <button
-        className={classNames('side-button', {
+        className={classNames(className, {
+          'side-button': !bottomButton,
+          'side-button-bottom': bottomButton,
           'side-button__focused': focused,
           'side-button__focused__highlighted': focused && !hideHighlight,
         })}
       >
         {icon}
       </button>
-      <p
-        className={classNames('side-button-description text-xl', {
-          'side-button-description__focused': focused,
-        })}
-      >
-        {description}
-      </p>
+      {description && (
+        <p
+          className={classNames('side-button-description text-xl', {
+            'side-button-description__focused': focused,
+          })}
+        >
+          {description}
+        </p>
+      )}
     </div>
   );
 };
@@ -56,8 +64,6 @@ const SideBar = ({ expandHeight, setExpandHeight }: ISideBar): JSX.Element => {
   const router = useRouter();
   const [expandWidth, setExpandWidth] = useState<boolean | null>(null);
 
-  console.log(expandWidth, expandHeight);
-
   return (
     <div
       className={classNames('side-bar', {
@@ -68,43 +74,52 @@ const SideBar = ({ expandHeight, setExpandHeight }: ISideBar): JSX.Element => {
       })}
     >
       <SideButton
-        focused
+        className={classNames({
+          'side-button-bottom__move-up': expandHeight !== null ? !expandHeight : null,
+          'side-button-bottom__move-down': expandHeight,
+        })}
         onClick={() => {
           setExpandWidth(null);
           setExpandHeight(expandHeight === null ? false : !expandHeight);
         }}
         icon={expandHeight === null || expandHeight ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-        description="Collapse"
-        hideHighlight
-      />
-      <SideButton
         focused
-        onClick={() => {
-          setExpandHeight(null);
-          setExpandWidth(expandWidth === null ? true : !expandWidth);
-        }}
-        icon={expandWidth === null || !expandWidth ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-        description="Hide"
         hideHighlight
+        bottomButton
       />
-      <SideButton
-        focused={router.pathname === '/'}
-        onClick={() => router.push('/')}
-        icon={<HomeOutlinedIcon />}
-        description="Home"
-      />
-      <SideButton
-        focused={router.pathname === '/about'}
-        onClick={() => router.push('/about')}
-        icon={<InfoOutlinedIcon />}
-        description="About"
-      />
-      <SideButton
-        focused={router.pathname === '/projects'}
-        onClick={() => router.push('/projects')}
-        icon={<AppShortcutOutlinedIcon />}
-        description="Projects"
-      />
+
+      {(expandHeight === null || expandHeight) && (
+        <>
+          <SideButton
+            focused
+            onClick={() => {
+              setExpandHeight(null);
+              setExpandWidth(expandWidth === null ? true : !expandWidth);
+            }}
+            icon={<MenuIcon />}
+            description="Hide"
+            hideHighlight
+          />
+          <SideButton
+            focused={router.pathname === '/'}
+            onClick={() => router.push('/')}
+            icon={<HomeOutlinedIcon />}
+            description="Home"
+          />
+          <SideButton
+            focused={router.pathname === '/about'}
+            onClick={() => router.push('/about')}
+            icon={<InfoOutlinedIcon />}
+            description="About"
+          />
+          <SideButton
+            focused={router.pathname === '/projects'}
+            onClick={() => router.push('/projects')}
+            icon={<AppShortcutOutlinedIcon />}
+            description="Projects"
+          />
+        </>
+      )}
     </div>
   );
 };

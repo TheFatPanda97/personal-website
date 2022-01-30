@@ -1,3 +1,5 @@
 .index-page {
-  height: calc(100vh - 68px);
+  height: calc(100vh - $tab-bar-height);
+  background-color: white;
+  color: black;
 }
