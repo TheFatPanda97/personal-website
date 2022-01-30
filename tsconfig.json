@@ -15,9 +15,10 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@scss/*": ["scss/*"],
-      "@pages/*": ["pages/*"],
       "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@public/*": ["public/*"],
+      "@store/*": ["store/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -107,13 +107,13 @@ const SideBar = ({ expandHeight, setExpandHeight }: ISideBar): JSX.Element => {
             description="Home"
           />
           <SideButton
-            focused={router.pathname === '/about'}
+            focused={router.pathname.split('/')[1] === 'about'}
             onClick={() => router.push('/about')}
             icon={<InfoOutlinedIcon />}
             description="About"
           />
           <SideButton
-            focused={router.pathname === '/projects'}
+            focused={router.pathname.split('/')[1] === 'projects'}
             onClick={() => router.push('/projects')}
             icon={<AppShortcutOutlinedIcon />}
             description="Projects"
