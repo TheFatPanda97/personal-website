@@ -41,7 +41,7 @@
   height: 100vh;
   box-sizing: content-box;
   background-color: $background-light-black;
-  border: 1px solid rgb(28, 31, 35);
+  border: 1px solid $light-grey;
   border-top: none;
   border-bottom: none;
   display: flex;
@@ -129,6 +129,7 @@
       left: 0;
       background-color: $background-light-black;
       z-index: 9999;
+      border-bottom: 1px solid $light-grey;
 
       &__move-up {
         animation: move-up 0.5s forwards;

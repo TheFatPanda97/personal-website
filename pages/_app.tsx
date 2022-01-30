@@ -22,9 +22,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         </div>
       </div>
       {expandHeight !== null && !expandHeight && (
-        <div className="content">
-          <Component {...pageProps} />
-        </div>
+        <Component {...pageProps} />
+        // <div className="content">
+        // </div>
       )}
     </div>
   );
