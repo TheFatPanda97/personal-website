@@ -4,11 +4,12 @@
 @tailwind utilities;
 
 // global styling
-@import "./common/breakpoints";
-@import "./common/colors";
-@import "./common/global";
+@import './common/breakpoints';
+@import './common/colors';
+@import './common/global';
 
+// page styling
+@import './pages/IndexPage';
 
 // component styling
-
-
+@import './components/SideBar';
