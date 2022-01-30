@@ -6,20 +6,32 @@ import MenuIcon from '@mui/icons-material/Menu';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import AppShortcutOutlinedIcon from '@mui/icons-material/AppShortcutOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 interface ISideButton {
   onClick: () => void;
   icon: JSX.Element;
   focused: boolean;
   description?: string;
+  hideHighlight?: boolean;
 }
 
-const SideButton = ({ onClick, icon, focused, description }: ISideButton): JSX.Element => {
+const SideButton = ({
+  onClick,
+  icon,
+  focused,
+  description,
+  hideHighlight,
+}: ISideButton): JSX.Element => {
   return (
-    <div className="flex items-center" onClick={onClick}>
+    <div className="side-button-container flex items-center" onClick={onClick}>
       <button
         className={classNames('side-button', {
           'side-button__focused': focused,
+          'side-button__focused__highlighted': focused && !hideHighlight,
         })}
       >
         {icon}
@@ -35,21 +47,45 @@ const SideButton = ({ onClick, icon, focused, description }: ISideButton): JSX.E
   );
 };
 
-const SideBar = (): JSX.Element => {
+interface ISideBar {
+  expandHeight: boolean | null;
+  setExpandHeight: (expandHeight: boolean | null) => void;
+}
+
+const SideBar = ({ expandHeight, setExpandHeight }: ISideBar): JSX.Element => {
   const router = useRouter();
-  const [opened, setOpened] = useState<boolean | null>(null);
+  const [expandWidth, setExpandWidth] = useState<boolean | null>(null);
+
+  console.log(expandWidth, expandHeight);
 
   return (
     <div
       className={classNames('side-bar', {
-        'side-bar__opened': opened,
-        'side-bar__closed': opened !== null ? !opened : null,
+        'side-bar__expand-width': expandWidth,
+        'side-bar__collapse-width': expandWidth !== null ? !expandWidth : null,
+        'side-bar__expand-height': expandHeight,
+        'side-bar__collapse-height': expandHeight !== null ? !expandHeight : null,
       })}
     >
       <SideButton
         focused
-        onClick={() => setOpened(opened === null ? true : !opened)}
-        icon={<MenuIcon />}
+        onClick={() => {
+          setExpandWidth(null);
+          setExpandHeight(expandHeight === null ? false : !expandHeight);
+        }}
+        icon={expandHeight === null || expandHeight ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+        description="Collapse"
+        hideHighlight
+      />
+      <SideButton
+        focused
+        onClick={() => {
+          setExpandHeight(null);
+          setExpandWidth(expandWidth === null ? true : !expandWidth);
+        }}
+        icon={expandWidth === null || !expandWidth ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+        description="Hide"
+        hideHighlight
       />
       <SideButton
         focused={router.pathname === '/'}
