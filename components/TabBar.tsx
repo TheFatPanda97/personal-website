@@ -19,9 +19,11 @@ const Tab = ({ focused, title, onClick, iconUrl }: ITab): JSX.Element => {
       })}
       onClick={onClick}
     >
-      <Image src={iconUrl} alt="viaplanner" width={20} height={20} />
-      <div className="w-3" />
-      <p>{title}</p>
+      <div className="img-container">
+        <Image src={iconUrl} alt="viaplanner" width={20} height={20} layout="intrinsic" />
+      </div>
+      {/* <div className="w-3" /> */}
+      <p className="title">{title}</p>
     </div>
   );
 };
@@ -37,18 +39,19 @@ const parsePathName = (pathname: string): string[] => {
 const TabBar = (): JSX.Element => {
   const router = useRouter();
   const { tabs } = useAppSelector((state) => state.tabs);
-  const parsedPathName = parsePathName(router.pathname);
-  const pageTabs = tabs[parsedPathName[0]];
-
-  const xsss = '';
-
-  console.log(parsedPathName);
-  console.log(pageTabs);
+  const parsedPathName = parsePathName(router.asPath);
+  const pageTabs = tabs[parsedPathName[0]] || [];
 
   return (
     <div className="tab-bar">
       {pageTabs.map(({ key, title, iconUrl }) => (
-        <Tab key={key} focused title={title} iconUrl={iconUrl} onClick={() => {}} />
+        <Tab
+          key={key}
+          focused={parsedPathName[1] === key}
+          title={title}
+          iconUrl={iconUrl}
+          onClick={() => router.push(`/${parsedPathName[0]}/${key}`)}
+        />
       ))}
     </div>
   );

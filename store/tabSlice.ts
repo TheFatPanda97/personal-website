@@ -14,7 +14,7 @@ interface ITabState {
 // Define the initial state using that type
 const initialState: ITabState = {
   tabs: {
-    '/': [
+    home: [
       {
         key: 'welcome',
         title: 'Welcome',
@@ -25,7 +25,7 @@ const initialState: ITabState = {
     about: [
       {
         key: 'who-am-i',
-        title: 'Who Am I?',
+        title: 'Who Am I',
         iconUrl:
           'https://raw.githubusercontent.com/VIAplanner/via-timetable/master/public/favicon.ico',
       },
@@ -34,6 +34,18 @@ const initialState: ITabState = {
       {
         key: 'viaplanner',
         title: 'Viaplanner',
+        iconUrl:
+          'https://raw.githubusercontent.com/VIAplanner/via-timetable/master/public/favicon.ico',
+      },
+      {
+        key: 'actnow',
+        title: 'Act Now',
+        iconUrl:
+          'https://raw.githubusercontent.com/VIAplanner/via-timetable/master/public/favicon.ico',
+      },
+      {
+        key: 'weather-man',
+        title: 'Weather Man',
         iconUrl:
           'https://raw.githubusercontent.com/VIAplanner/via-timetable/master/public/favicon.ico',
       },

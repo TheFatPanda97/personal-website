@@ -15,7 +15,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <div className="main-app">
         <div className="flex h-full">
           <SideBar expandHeight={expandHeight} setExpandHeight={setExpandHeight} />
-          <div className="w-full">
+          <div className="main-area">
             <TabBar />
             {(expandHeight === null || expandHeight) && (
               <div className="content">

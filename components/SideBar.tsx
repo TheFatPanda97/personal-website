@@ -8,8 +8,6 @@ import AppShortcutOutlinedIcon from '@mui/icons-material/AppShortcutOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 interface ISideButton {
   onClick: () => void;
@@ -39,6 +37,7 @@ const SideButton = ({
           'side-button__focused': focused,
           'side-button__focused__highlighted': focused && !hideHighlight,
         })}
+        type="button"
       >
         {icon}
       </button>
@@ -101,8 +100,8 @@ const SideBar = ({ expandHeight, setExpandHeight }: ISideBar): JSX.Element => {
             hideHighlight
           />
           <SideButton
-            focused={router.pathname === '/'}
-            onClick={() => router.push('/')}
+            focused={router.pathname.split('/')[1] === 'home'}
+            onClick={() => router.push('/home')}
             icon={<HomeOutlinedIcon />}
             description="Home"
           />
