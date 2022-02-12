@@ -36,7 +36,7 @@ cube3.position.x = 2;
 
 group.position.y = 1;
 group.scale.y = 2;
-group.rotation.y = 1
+group.rotation.y = 1;
 
 // Axes helper
 const axesHelper = new THREE.AxesHelper(1);
