@@ -1,0 +1,51 @@
+.nav-bar {
+  $navbar-height: 70px;
+
+  display: flex;
+  height: $navbar-height;
+  margin-top: 10px;
+
+  .home-section {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    .title {
+      padding-left: 10px;
+    }
+
+    .logo-container {
+      width: $navbar-height;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    align-items: center;
+
+    .tab {
+      user-select: none;
+      cursor: pointer;
+      padding: 8px 20px;
+      margin: 0px 5px;
+      border: solid 1px transparent; // hack for getting the border to not resize the box
+      border-radius: 10px;
+      transition: border 0.35s;
+
+      &:hover {
+        border: 1px solid #88c5cc;
+        border-radius: 10px;
+      }
+
+      &-active {
+        border: 1px solid #88c5cc;
+      }
+    }
+  }
+}
