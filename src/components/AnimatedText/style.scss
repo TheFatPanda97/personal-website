@@ -1,0 +1,23 @@
+.animated-text-container {
+  p {
+    margin: 0;
+  }
+
+  .inner-container {
+    position: relative;
+    display: inline-block;
+
+    .background-text {
+      display: inline-block;
+    }
+
+    .fill-text {
+      position: absolute;
+      white-space: nowrap;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      display: inline-block;
+    }
+  }
+}

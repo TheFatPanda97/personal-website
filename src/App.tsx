@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div>
       Hello There
-      <AnimatedText width={90}>This is a test</AnimatedText>
+      <AnimatedText width={20}>This is a test</AnimatedText>
     </div>
   );
 };
