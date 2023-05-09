@@ -3,6 +3,7 @@ import useScrollRerender from './hooks/useScrollRerender';
 
 import AnimatedText from './components/AnimatedText';
 import Tabs from './components/Tabs';
+import Home from './sections/HomeSection';
 
 const App = () => {
   useScrollRerender();
@@ -12,7 +13,7 @@ const App = () => {
       <div className="top-vignette" />
       <img src="./logo.png" alt="logo" width={35} className="logo-img" />
       <Tabs />
-      <div style={{ height: 1000 }}></div>
+      <Home />
       <AnimatedText speed={3}>This is a test</AnimatedText>
       <AnimatedText>This is another test</AnimatedText>
       <AnimatedText>This is a test</AnimatedText>

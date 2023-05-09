@@ -1,0 +1,23 @@
+.home-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 90px;
+    margin: 0;
+    color: #d4d3d3;
+  }
+
+  .special {
+    color: #54b3d6;
+  }
+
+  .name {
+    margin: 0 5px;
+    color: #54b3d6;
+  }
+}
