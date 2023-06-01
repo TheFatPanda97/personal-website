@@ -1,13 +1,23 @@
 /// <reference types="vite-plugin-svgr/client" />
 import './style.scss';
+
+import { FC, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 import { ReactComponent as LighBulb } from '../../assets/lightbulb.svg';
 import { ReactComponent as Dream } from '../../assets/dream.svg';
 import { ReactComponent as Wrench } from '../../assets/wrench.svg';
 
-const Home = () => {
+interface IProps {
+  setInView: (inView: boolean) => void;
+}
+
+const Home: FC<IProps> = ({ setInView }) => {
+  const { ref, inView } = useInView();
+  useEffect(() => setInView(inView), [inView]);
+
   return (
-    <div className="home-section">
-      {/* <HeartBeat className="heartbeat" /> */}
+    <div className="home-section" ref={ref}>
       <LighBulb className="lightbulb" />
       <Dream className="dream" />
       <Wrench className="wrench" />

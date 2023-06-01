@@ -1,23 +1,27 @@
 import './scss/index.scss';
+import { useEffect, useState } from 'react';
+
 import useScrollRerender from './hooks/useScrollRerender';
 
-import AnimatedText from './components/AnimatedText';
 import Tabs from './components/Tabs';
 import Home from './sections/HomeSection';
+import About from './sections/AboutSection';
+import Project from './sections/ProjectSection';
 
 const App = () => {
   useScrollRerender();
+
+  const [homeInView, setHomeInview] = useState(true);
+  const [aboutInView, setAboutInview] = useState(false);
 
   return (
     <>
       <div className="top-vignette" />
       <img src="./logo.png" alt="logo" width={35} className="logo-img" />
-      <Tabs />
-      <Home />
-      <AnimatedText speed={3}>This is a test</AnimatedText>
-      <AnimatedText>This is another test</AnimatedText>
-      <AnimatedText>This is a test</AnimatedText>
-      <div style={{ height: 1000 }}></div>
+      <Tabs inViews={[homeInView, aboutInView]} />
+      <Home setInView={setHomeInview} />
+      <About setInView={setAboutInview} />
+      <Project />
       <div className="bottom-vignette" />
     </>
   );

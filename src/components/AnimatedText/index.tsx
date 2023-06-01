@@ -15,7 +15,7 @@ const AnimatedText: FC<IProps> = ({
   children,
   fontSize = 24,
   unfillColor = 'grey',
-  fillColor = '#88c5cc',
+  fillColor = '#54b3d6',
 }) => {
   const [fillWidth, setFillWidth] = useState(0);
 
