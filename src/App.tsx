@@ -1,4 +1,4 @@
-import './index.scss';
+import './scss/index.scss';
 import useScrollRerender from './hooks/useScrollRerender';
 
 import AnimatedText from './components/AnimatedText';

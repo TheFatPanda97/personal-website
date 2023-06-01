@@ -1,6 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
 import './style.scss';
-import { ReactComponent as HeartBeat } from '../../assets/heartbeat.svg';
 import { ReactComponent as LighBulb } from '../../assets/lightbulb.svg';
 import { ReactComponent as Dream } from '../../assets/dream.svg';
 import { ReactComponent as Wrench } from '../../assets/wrench.svg';
