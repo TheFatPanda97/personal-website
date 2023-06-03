@@ -47,6 +47,11 @@
       width: 15%;
     }
 
+    @include laptop {
+      top: 6%;
+      right: 15%;
+    }
+
     path {
       stroke: #d67754;
       stroke-dasharray: 450;
@@ -66,6 +71,10 @@
       top: 200px;
       left: 43%;
       width: 15%;
+    }
+
+    @include laptop {
+      top: 35%;
     }
 
     path {

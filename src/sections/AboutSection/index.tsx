@@ -16,7 +16,6 @@ const About: FC<IProps> = ({ setInView }) => {
   return (
     <div className="about-section" ref={ref}>
       <Rocket className="rocket" />
-      <h2 className="title">About Me</h2>
       <AnimatedText fontSize={36}>Who I Was</AnimatedText>
       <h2>
         Backend Software Devloper Intern @ <span className="highlight">Shopify</span>
@@ -36,11 +35,11 @@ const About: FC<IProps> = ({ setInView }) => {
         <span className="highlight">Computer Science Graduate </span> From the University of Toronto
       </h2>
       <h2>
-        Software Developer With Over <span className="highlight"> 4 Years of Experiences</span>
+        Software Developer With Over <span className="highlight"> 2 Years of Experiences</span>
       </h2>
       <h2>
         Passionate about
-        <span className="highlight"> web development, cloud computing and AI </span>
+        <span className="highlight"> Web development, Cloud computing and AI </span>
       </h2>
       <AnimatedText fontSize={36}>Who I Want to Be</AnimatedText>
       <h2>
