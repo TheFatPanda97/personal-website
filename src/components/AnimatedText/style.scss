@@ -1,4 +1,9 @@
 .animated-text-container {
+  &--center {
+    display: flex;
+    justify-content: center;
+  }
+
   p {
     margin: 0;
   }

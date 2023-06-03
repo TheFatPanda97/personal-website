@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  border-radius: 5px;
+
+  .img-container {
+    min-height: 45%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+
+  .description-container {
+    height: 50%;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .btn-group {
+    display: flex;
+    padding: 10px;
+
+    .MuiButton-root {
+      color: #54b3d6;
+      margin-right: 5px;
+    }
+  }
+}

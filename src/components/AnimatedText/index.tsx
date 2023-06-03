@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import classnames from 'classnames';
+
 import './style.scss';
 
 import type { FC, ReactNode } from 'react';
@@ -8,6 +10,8 @@ interface IProps {
   fontSize?: number;
   unfillColor?: string;
   fillColor?: string;
+  center?: boolean;
+  className?: string;
 }
 
 const AnimatedText: FC<IProps> = ({
@@ -16,12 +20,17 @@ const AnimatedText: FC<IProps> = ({
   fontSize = 24,
   unfillColor = 'grey',
   fillColor = '#54b3d6',
+  center,
+  className = '',
 }) => {
   const [fillWidth, setFillWidth] = useState(0);
 
   return (
     <div
-      className="animated-text-container"
+      className={classnames('animated-text-container', {
+        'animated-text-container--center': center,
+        [className]: className,
+      })}
       ref={(el) => {
         if (!el) return;
 
