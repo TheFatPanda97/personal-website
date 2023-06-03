@@ -1,5 +1,5 @@
 import './scss/index.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import useScrollRerender from './hooks/useScrollRerender';
 
