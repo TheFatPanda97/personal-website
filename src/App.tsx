@@ -7,6 +7,7 @@ import Tabs from './components/Tabs';
 import Home from './sections/HomeSection';
 import About from './sections/AboutSection';
 import Project from './sections/ProjectSection';
+import Contact from './sections/ContactSection';
 
 const App = () => {
   useScrollRerender();
@@ -22,6 +23,7 @@ const App = () => {
       <Home setInView={setHomeInview} />
       <About setInView={setAboutInview} />
       <Project />
+      <Contact />
       <div className="bottom-vignette" />
     </>
   );

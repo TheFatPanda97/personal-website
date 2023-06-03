@@ -1,0 +1,28 @@
+.contact-section {
+  padding: 50px;
+  margin-bottom: 100px;
+  padding-top: 0;
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+
+    form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .MuiTextField-root {
+        margin-bottom: 20px;
+      }
+
+      .submit-btn {
+        margin-top: 20px;
+      }
+    }
+  }
+}
