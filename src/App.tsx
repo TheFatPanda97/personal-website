@@ -12,16 +12,32 @@ import Contact from './sections/ContactSection';
 const App = () => {
   useScrollRerender();
 
-  const [homeInView, setHomeInview] = useState(true);
-  const [aboutInView, setAboutInview] = useState(false);
-  const [projectInView, setProjectInview] = useState(false);
-  const [contactInView, setContactInview] = useState(false);
+  const [homeInView, setHomeInview] = useState({
+    ref: null,
+    inView: true,
+    tabName: 'Home',
+  });
+  const [aboutInView, setAboutInview] = useState({
+    ref: null,
+    inView: false,
+    tabName: 'About',
+  });
+  const [projectInView, setProjectInview] = useState({
+    ref: null,
+    inView: false,
+    tabName: 'Projects',
+  });
+  const [contactInView, setContactInview] = useState({
+    ref: null,
+    inView: false,
+    tabName: 'Contact',
+  });
 
   return (
     <>
       <div className="top-vignette" />
       <img src="./logo.png" alt="logo" width={35} className="logo-img" />
-      <Tabs inViews={[homeInView, aboutInView, projectInView, contactInView]} />
+      <Tabs tabStates={[homeInView, aboutInView, projectInView, contactInView]} />
       <Home setInView={setHomeInview} />
       <About setInView={setAboutInview} />
       <Project setInView={setProjectInview} />

@@ -3,19 +3,28 @@ import './style.scss';
 import AnimatedText from '../../components/AnimatedText';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
-import { useInView } from 'react-intersection-observer';
+import useCustomInView from '../../hooks/useCustomInView';
 import { FC, useEffect } from 'react';
+import { IInViewState } from '../../types/general';
 
 interface IProps {
-  setInView: (inView: boolean) => void;
+  setInView: (inView: IInViewState) => void;
 }
 
 const Contact: FC<IProps> = ({ setInView }) => {
-  const { ref, inView } = useInView();
-  useEffect(() => setInView(inView), [inView]);
+  const { ref, inView, setRefs } = useCustomInView();
+  useEffect(
+    () =>
+      setInView({
+        inView,
+        ref,
+        tabName: 'Contact',
+      }),
+    [inView],
+  );
 
   return (
-    <div className="contact-section" ref={ref}>
+    <div className="contact-section" ref={setRefs}>
       <AnimatedText className="title" center fontSize={36} speed={1.9}>
         Contact Me
       </AnimatedText>

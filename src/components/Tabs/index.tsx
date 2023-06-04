@@ -4,28 +4,36 @@ import classnames from 'classnames';
 import './style.scss';
 
 interface IProps {
-  inViews: boolean[];
+  tabStates: {
+    ref: any;
+    inView: boolean;
+    tabName: string;
+  }[];
 }
 
-const Tabs: FC<IProps> = ({ inViews }) => {
-  const allTabs = ['Home', 'About', 'Projects', 'Contact'];
+const Tabs: FC<IProps> = ({ tabStates }) => {
   const [tab, setTab] = useState<string>('Home');
 
-  useEffect(() => {
-    allTabs.every((tabName, index) => {
-      if (inViews[index]) {
-        setTab(tabName);
-        // return false;
-      }
+  const setTabState = (tabName: string, ref: any) => {
+    setTab(tabName);
+    const yOffset = -100;
+    const element = ref.current;
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
 
-      return true;
+  useEffect(() => {
+    tabStates.forEach(({ inView, tabName }) => {
+      if (inView) {
+        setTab(tabName);
+      }
     });
-  }, [inViews]);
+  }, [tabStates]);
 
   return (
     <ul className="tabs">
-      {allTabs.map((tabName) => (
-        <li key={tabName} onClick={() => setTab(tabName)}>
+      {tabStates.map(({ tabName, ref }) => (
+        <li key={tabName} onClick={() => setTabState(tabName, ref)}>
           <span className={classnames('tab', { 'tab--active': tab === tabName })}>{tabName}</span>
         </li>
       ))}

@@ -1,20 +1,29 @@
 import { FC, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import useCustomInView from '../../hooks/useCustomInView';
 import AnimatedText from '../../components/AnimatedText';
 import { ReactComponent as Rocket } from '../../assets/rocket.svg';
+import { IInViewState } from '../../types/general';
 
 import './style.scss';
 
 interface IProps {
-  setInView: (inView: boolean) => void;
+  setInView: (inView: IInViewState) => void;
 }
 
 const About: FC<IProps> = ({ setInView }) => {
-  const { ref, inView } = useInView();
-  useEffect(() => setInView(inView), [inView]);
+  const { ref, inView, setRefs } = useCustomInView();
+  useEffect(
+    () =>
+      setInView({
+        inView,
+        ref,
+        tabName: 'About',
+      }),
+    [inView],
+  );
 
   return (
-    <div className="about-section" ref={ref}>
+    <div className="about-section" ref={setRefs}>
       <Rocket className="rocket" />
       <AnimatedText fontSize={36}>Who I Was</AnimatedText>
       <h2>

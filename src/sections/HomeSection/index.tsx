@@ -2,22 +2,31 @@
 import './style.scss';
 
 import { FC, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 import { ReactComponent as LighBulb } from '../../assets/lightbulb.svg';
 import { ReactComponent as Dream } from '../../assets/dream.svg';
 import { ReactComponent as Wrench } from '../../assets/wrench.svg';
+import { IInViewState } from '../../types/general';
+import useCustomInView from '../../hooks/useCustomInView';
 
 interface IProps {
-  setInView: (inView: boolean) => void;
+  setInView: (inView: IInViewState) => void;
 }
 
 const Home: FC<IProps> = ({ setInView }) => {
-  const { ref, inView } = useInView();
-  useEffect(() => setInView(inView), [inView]);
+  const { ref, inView, setRefs } = useCustomInView();
+  useEffect(
+    () =>
+      setInView({
+        inView,
+        ref,
+        tabName: 'Home',
+      }),
+    [inView],
+  );
 
   return (
-    <div className="home-section" ref={ref}>
+    <div className="home-section" ref={setRefs}>
       <LighBulb className="lightbulb" />
       <Dream className="dream" />
       <Wrench className="wrench" />

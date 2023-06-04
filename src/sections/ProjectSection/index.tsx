@@ -1,19 +1,29 @@
 import './style.scss';
+
 import Card from '../../components/Card';
 import AnimatedText from '../../components/AnimatedText';
 import { FC, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import useCustomInView from '../../hooks/useCustomInView';
+import { IInViewState } from '../../types/general';
 
 interface IProps {
-  setInView: (inView: boolean) => void;
+  setInView: (inView: IInViewState) => void;
 }
 
 const Project: FC<IProps> = ({ setInView }) => {
-  const { ref, inView } = useInView();
-  useEffect(() => setInView(inView), [inView]);
+  const { ref, inView, setRefs } = useCustomInView();
+  useEffect(
+    () =>
+      setInView({
+        inView,
+        ref,
+        tabName: 'Project',
+      }),
+    [inView],
+  );
 
   return (
-    <div className="project-section" ref={ref}>
+    <div className="project-section" ref={setRefs}>
       <AnimatedText className="title" fontSize={36} speed={1.2} center>
         My Projects
       </AnimatedText>
