@@ -24,7 +24,7 @@ const About: FC<IProps> = ({ setInView }) => {
         Software Devloper Intern @ <span className="highlight">Forma AI</span>
       </h2>
       <h2>
-        Computer Science Teachin Assistant @{' '}
+        Computer Science Teaching Assistant @{' '}
         <span className="highlight">University of Toronto</span>
       </h2>
       <h2>
@@ -35,7 +35,7 @@ const About: FC<IProps> = ({ setInView }) => {
         <span className="highlight">Computer Science Graduate </span> From the University of Toronto
       </h2>
       <h2>
-        Software Developer With Over <span className="highlight"> 2 Years of Experiences</span>
+        Software Developer with <span className="highlight"> Over 2 Years of Experiences</span>
       </h2>
       <h2>
         Passionate about

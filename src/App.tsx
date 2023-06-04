@@ -14,16 +14,18 @@ const App = () => {
 
   const [homeInView, setHomeInview] = useState(true);
   const [aboutInView, setAboutInview] = useState(false);
+  const [projectInView, setProjectInview] = useState(false);
+  const [contactInView, setContactInview] = useState(false);
 
   return (
     <>
       <div className="top-vignette" />
       <img src="./logo.png" alt="logo" width={35} className="logo-img" />
-      <Tabs inViews={[homeInView, aboutInView]} />
+      <Tabs inViews={[homeInView, aboutInView, projectInView, contactInView]} />
       <Home setInView={setHomeInview} />
       <About setInView={setAboutInview} />
-      <Project />
-      <Contact />
+      <Project setInView={setProjectInview} />
+      <Contact setInView={setContactInview} />
       <div className="bottom-vignette" />
     </>
   );
