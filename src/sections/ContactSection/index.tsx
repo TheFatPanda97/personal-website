@@ -6,6 +6,9 @@ import { Button } from '@mui/material';
 import useCustomInView from '../../hooks/useCustomInView';
 import { FC, useEffect } from 'react';
 import { IInViewState } from '../../types/general';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 interface IProps {
   setInView: (inView: IInViewState) => void;
@@ -28,6 +31,12 @@ const Contact: FC<IProps> = ({ setInView }) => {
       <AnimatedText className="title" center fontSize={36} speed={1.9}>
         Contact Me
       </AnimatedText>
+      <div className="link-container">
+        <LinkedInIcon
+          onClick={() => window.open('https://www.linkedin.com/in/shawn-hu/', '_blank')}
+        />
+        <GitHubIcon onClick={() => window.open('https://github.com/TheFatPanda97', '_blank')} />
+      </div>
       <div className="form-container">
         <form name="contact" method="post">
           <input type="hidden" name="form-name" value="contact" />

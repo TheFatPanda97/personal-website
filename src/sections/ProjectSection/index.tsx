@@ -73,7 +73,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       </AnimatedText>
       <div className="project-container">
         {projects.map((project) => (
-          <Card {...project} />
+          <Card key={project.title} {...project} />
         ))}
       </div>
     </div>
