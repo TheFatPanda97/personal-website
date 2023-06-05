@@ -1,9 +1,13 @@
 @import '../../scss/mixin';
 
 .project-section {
-  padding: 50px;
+  padding: 50px 250px;
   padding-bottom: 0;
   min-height: 100vh;
+
+  @include laptop {
+    padding: 50px;
+  }
 
   @include mobile {
     padding: 0;
@@ -12,7 +16,7 @@
   .project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 300px);
+    grid-template-rows: repeat(2, 320px);
     grid-gap: 20px;
 
     @include mobile {

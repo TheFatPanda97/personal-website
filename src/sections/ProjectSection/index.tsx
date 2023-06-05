@@ -35,7 +35,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       img: '/viaplanner.gif',
       title: 'VIAplanner',
       description:
-        'VIAplanner is a tool designed by students at the University of Toronto to help the community. We desire to enhance the course selection process.',
+        'VIAplanner is a web application that generates timetable for students at the University of Toronto for over 1000 users at peak usage.',
       repo: 'https://github.com/VIAplanner/via-timetable',
       url: 'https://viaplanner.ca',
     },
