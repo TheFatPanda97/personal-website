@@ -1,0 +1,53 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  border-radius: 5px;
+
+  h3 {
+    margin: 0;
+  }
+
+  .img-container {
+    max-height: 140px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .bottom {
+      object-position: bottom;
+    }
+
+    .contain {
+      object-fit: contain;
+    }
+  }
+
+  .description-container {
+    height: 45%;
+    font-size: 14px;
+    padding: 15px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-group {
+    display: flex;
+    padding: 10px;
+    height: 10%;
+
+    .MuiButton-root {
+      margin-right: 5px;
+    }
+  }
+}

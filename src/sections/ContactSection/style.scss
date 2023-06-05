@@ -1,0 +1,56 @@
+@import '../../scss/mixin';
+
+.contact-section {
+  padding: 50px;
+  margin-bottom: 100px;
+  padding-top: 0;
+
+  @include mobile {
+    padding: 0;
+    padding-top: 50px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+
+    form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      .MuiTextField-root {
+        margin-bottom: 20px;
+      }
+
+      .submit-btn {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .link-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+    svg {
+      margin: 0 10px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        color: #d67754;
+        transform: scale(1.2);
+      }
+    }
+  }
+}

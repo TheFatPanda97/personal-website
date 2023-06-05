@@ -1,0 +1,39 @@
+.tabs {
+  position: fixed;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top: 16px;
+  right: 16px;
+  display: inline-block;
+  z-index: 9999;
+
+  li {
+    text-align: right;
+
+    .tab {
+      text-decoration: none;
+      display: inline-block;
+      color: grey;
+      transition: all 0.2s ease-in-out;
+      padding: 2px;
+      margin: 2px;
+      user-select: none;
+      cursor: pointer;
+
+      &:focus {
+        user-select: none;
+      }
+
+      &:hover {
+        color: #54b3d6;
+        transform: translateX(-13px);
+      }
+
+      &--active {
+        color: #54b3d6;
+        transform: translateX(-13px);
+      }
+    }
+  }
+}

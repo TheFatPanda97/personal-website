@@ -1,0 +1,147 @@
+@import '../../scss/mixin';
+
+.home-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .lightbulb {
+    position: absolute;
+    top: -200px;
+    left: 20%;
+    z-index: 99;
+    width: 5%;
+    stroke-width: 6;
+
+    @include mobile {
+      top: -100px;
+      left: 10%;
+      width: 15%;
+    }
+
+    path {
+      stroke: #d67754;
+    }
+
+    .light-stroke {
+      stroke-dasharray: 120;
+      animation: lightbulb linear 5s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .dream {
+    position: absolute;
+    z-index: 99;
+    top: 10%;
+    right: 20%;
+    width: 6%;
+    stroke-width: 6;
+
+    @include mobile {
+      top: -100px;
+      right: 10%;
+      width: 15%;
+    }
+
+    @include laptop {
+      top: 6%;
+      right: 15%;
+    }
+
+    path {
+      stroke: #d67754;
+      stroke-dasharray: 450;
+      animation: cloud linear 3s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .wrench {
+    position: absolute;
+    z-index: 99;
+    top: 30%;
+    left: 20%;
+    width: 6%;
+
+    @include mobile {
+      top: 200px;
+      left: 43%;
+      width: 15%;
+    }
+
+    @include laptop {
+      top: 35%;
+    }
+
+    path {
+      stroke: #d67754;
+      stroke-dasharray: 140;
+      animation: wrench linear 3s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  h1 {
+    @include mobile {
+      font-size: 30px;
+    }
+
+    font-size: 90px;
+    margin: 0;
+    color: #d4d3d3;
+  }
+
+  .special {
+    color: #54b3d6;
+  }
+
+  .name {
+    margin: 0 5px;
+    color: #54b3d6;
+  }
+
+  .text-container {
+    position: absolute;
+  }
+
+  h2 {
+    @include mobile {
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+  }
+
+  @keyframes lightbulb {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes cloud {
+    0% {
+      stroke-dashoffset: 900;
+    }
+
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes wrench {
+    0% {
+      stroke-dashoffset: 300;
+    }
+
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.animated-text-container {
+  &--center {
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .inner-container {
+    position: relative;
+    display: inline-block;
+
+    .background-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .fill-text {
+      position: absolute;
+      white-space: nowrap;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      display: inline-block;
+    }
+  }
+}
