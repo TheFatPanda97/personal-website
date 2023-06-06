@@ -44,18 +44,18 @@ const About: FC<IProps> = ({ setInView }) => {
         <span className="highlight">Computer Science Graduate </span> From the University of Toronto
       </h2>
       <h2>
-        Software Developer with <span className="highlight"> Over 2 Years of Experiences</span>
+        Software Developer with <span className="highlight"> Over 2 Years of Experience</span>
       </h2>
       <h2>
         Passionate about
-        <span className="highlight"> Web development, Cloud computing and AI </span>
+        <span className="highlight"> Web Development, Cloud Computing and AI </span>
       </h2>
       <AnimatedText fontSize={36}>Who I Want to Be</AnimatedText>
       <h2>
         A Full-Time <span className="highlight">Software Engineer </span>
       </h2>
       <h2>
-        Working On Something That <span className="highlight"> Directly Impacts Customers </span>
+        Working On Projects That <span className="highlight"> Directly Impacts Customers </span>
       </h2>
     </div>
   );
