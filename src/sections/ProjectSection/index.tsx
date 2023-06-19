@@ -27,7 +27,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       img: '/signado.png',
       title: 'Signado',
       description:
-        '1st Place Winner of 2023 DeerHacks. By using computer vision, Signado seemlessly translates ASL to English in real-time.',
+        '1st Place Winner of 2023 DeerHacks. By using computer vision, Signado seamlessly translates ASL to English in real time.',
       repo: 'https://devpost.com/software/signado',
       url: 'https://signado.tech/',
     },
@@ -35,7 +35,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       img: '/viaplanner.gif',
       title: 'VIAplanner',
       description:
-        'VIAplanner is a web application that generates timetable for students at the University of Toronto for over 1000 users at peak usage.',
+        'VIAplanner is a web application that generates timetables for students at the University of Toronto for over 1000 users at peak usage.',
       repo: 'https://github.com/VIAplanner/via-timetable',
       url: 'https://viaplanner.ca',
     },
@@ -43,7 +43,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       img: '/parcube.jpeg',
       title: 'Parcube',
       description:
-        'Parcube is an Android/iOS app that allows a driver to book an instant parking spot on some home owners sidewalk in the desired area.',
+        'Parcube is a cutting-edge React Native application designed to revolutionize the parking industry by decentralizing parking ownership. Our platform empowers individuals who own parking spots to effortlessly rent them out and earn a steady income.',
       repo: 'https://github.com/TheFatPanda97/finalprojectw23-parcube',
       url: 'https://parcube.netlify.app/',
       bottom: true,
