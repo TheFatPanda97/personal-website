@@ -24,6 +24,13 @@ const Project: FC<IProps> = ({ setInView }) => {
 
   const projects = [
     {
+      img: '/loop.gif',
+      title: 'loop',
+      description: `OpenAI GPT Powered Test Driven Development. Give Me Tests, I'll Give You Code.`,
+      repo: 'https://github.com/TheFatPanda97/loop',
+      url: 'https://marketplace.visualstudio.com/items?itemName=thefatpanda97.loop',
+    },
+    {
       img: '/signado.png',
       title: 'Signado',
       description:
