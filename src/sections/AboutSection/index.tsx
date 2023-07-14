@@ -44,7 +44,7 @@ const About: FC<IProps> = ({ setInView }) => {
         <span className="highlight">Computer Science Graduate </span> From the University of Toronto
       </h2>
       <h2>
-        Software Developer with <span className="highlight"> Over 2 Years of Experience</span>
+        Software Developer with <span className="highlight"> Over 4 Years of Experience</span>
       </h2>
       <h2>
         Passionate about
