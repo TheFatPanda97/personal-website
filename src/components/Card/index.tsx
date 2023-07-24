@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import classNames from 'classnames';
 
 interface IProps {
-  img: string;
+  media: string;
   description: string;
   repo: string;
   url?: string;
@@ -14,11 +14,36 @@ interface IProps {
   bottom?: boolean;
 }
 
-const Card: FC<IProps> = ({ title, img, description, repo, url, contain, bottom }) => {
+const getExtension = (file: string) => {
+  const regex = /\.[^.\\/:*?"<>|\r\n]+$/gm;
+  let extension = '';
+  let m;
+
+  while ((m = regex.exec(file)) !== null) {
+    // This is necessary to avoid infinite loops with zero-width matches
+    if (m.index === regex.lastIndex) {
+      regex.lastIndex++;
+    }
+
+    m.forEach((match) => {
+      extension = match;
+    });
+  }
+
+  return extension;
+};
+
+const Card: FC<IProps> = ({ title, media, description, repo, url, contain, bottom }) => {
+  const extension = getExtension(media);
+
   return (
     <div className="card">
-      <div className="img-container">
-        <img className={classNames({ contain, bottom })} src={img} alt="project image" />
+      <div className="media-container">
+        {extension === '.mp4' ? (
+          <video src={media} autoPlay loop muted />
+        ) : (
+          <img className={classNames({ contain, bottom })} src={media} alt="project image" />
+        )}
       </div>
       <div className="description-container">
         <h3>{title}</h3>

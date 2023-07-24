@@ -24,14 +24,14 @@ const Project: FC<IProps> = ({ setInView }) => {
 
   const projects = [
     {
-      img: '/loop.gif',
+      media: '/loop.mp4',
       title: 'loop',
       description: `OpenAI GPT Powered Test Driven Development. Give Me Tests, I'll Give You Code.`,
       repo: 'https://github.com/TheFatPanda97/loop',
       url: 'https://marketplace.visualstudio.com/items?itemName=thefatpanda97.loop',
     },
     {
-      img: '/signado.png',
+      media: '/signado.png',
       title: 'Signado',
       description:
         '1st Place Winner of 2023 DeerHacks. By using computer vision, Signado seamlessly translates ASL to English in real time.',
@@ -39,7 +39,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       url: 'https://signado.tech/',
     },
     {
-      img: '/viaplanner.gif',
+      media: '/viaplanner.mp4',
       title: 'VIAplanner',
       description:
         'VIAplanner is a web application that generates timetables for students at the University of Toronto for over 1000 users at peak usage.',
@@ -47,7 +47,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       url: 'https://viaplanner.ca',
     },
     {
-      img: '/parcube.jpeg',
+      media: '/parcube.jpeg',
       title: 'Parcube',
       description:
         'Parcube is a cutting-edge React Native application designed to revolutionize the parking industry by decentralizing parking ownership. Our platform empowers individuals who own parking spots to effortlessly rent them out and earn a steady income.',
@@ -56,14 +56,14 @@ const Project: FC<IProps> = ({ setInView }) => {
       bottom: true,
     },
     {
-      img: '/netlify-dns.png',
+      media: '/netlify-dns.png',
       title: 'Netlify DDNS',
       description:
         'A simple DDNS client that updates your Netlify DNS records to your current IP address.',
       repo: 'https://github.com/TheFatPanda97/netlify-dynamic-dns',
     },
     {
-      img: '/mcss.png',
+      media: '/mcss.png',
       title: 'UTM MCSS Website',
       description:
         'The official website for the University of Toronto Mississauga Math and Computational Sciences Society.',
