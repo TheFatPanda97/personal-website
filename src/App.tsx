@@ -50,7 +50,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="top-vignette" />
-      <img className="logo-img" src="./logo.png" alt="logo" width={35} onClick={onLogoClick} />
+      <img className="logo-img" src="./logo.webp" alt="logo" width={35} onClick={onLogoClick} />
       <LinkedInIcon
         id="linkedin-icon"
         onClick={() => window.open('https://www.linkedin.com/in/shawn-hu/', '_blank')}

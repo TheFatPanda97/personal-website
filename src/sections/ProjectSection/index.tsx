@@ -31,7 +31,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       url: 'https://marketplace.visualstudio.com/items?itemName=thefatpanda97.loop',
     },
     {
-      media: '/signado.png',
+      media: '/signado.webp',
       title: 'Signado',
       description:
         '1st Place Winner of 2023 DeerHacks. By using computer vision, Signado seamlessly translates ASL to English in real time.',
@@ -47,7 +47,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       url: 'https://viaplanner.ca',
     },
     {
-      media: '/parcube.jpeg',
+      media: '/parcube.webp',
       title: 'Parcube',
       description:
         'Parcube is a cutting-edge React Native application designed to revolutionize the parking industry by decentralizing parking ownership. Our platform empowers individuals who own parking spots to effortlessly rent them out and earn a steady income.',
@@ -56,14 +56,14 @@ const Project: FC<IProps> = ({ setInView }) => {
       bottom: true,
     },
     {
-      media: '/netlify-dns.png',
+      media: '/netlify-dns.webp',
       title: 'Netlify DDNS',
       description:
         'A simple DDNS client that updates your Netlify DNS records to your current IP address.',
       repo: 'https://github.com/TheFatPanda97/netlify-dynamic-dns',
     },
     {
-      media: '/mcss.png',
+      media: '/mcss.webp',
       title: 'UTM MCSS Website',
       description:
         'The official website for the University of Toronto Mississauga Math and Computational Sciences Society.',
