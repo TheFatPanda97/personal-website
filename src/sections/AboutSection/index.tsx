@@ -41,6 +41,9 @@ const About: FC<IProps> = ({ setInView }) => {
       </h2>
       <AnimatedText fontSize={36}>Who I Am</AnimatedText>
       <h2>
+        Software Engineer @ <span className="highlight">Laplaces AI</span>
+      </h2>
+      <h2>
         <span className="highlight">Computer Science Graduate </span> From the University of Toronto
       </h2>
       <h2>
@@ -52,7 +55,7 @@ const About: FC<IProps> = ({ setInView }) => {
       </h2>
       <AnimatedText fontSize={36}>Who I Want to Be</AnimatedText>
       <h2>
-        A Full-Time <span className="highlight">Software Engineer </span>
+        An <span className="highlight">AWS Certified</span> Software Engineer
       </h2>
       <h2>
         Working On Projects That <span className="highlight"> Directly Impacts Customers </span>
