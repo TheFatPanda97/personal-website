@@ -61,6 +61,7 @@ const Project: FC<IProps> = ({ setInView }) => {
       description:
         'A simple DDNS client that updates your Netlify DNS records to your current IP address.',
       repo: 'https://github.com/TheFatPanda97/netlify-dynamic-dns',
+      url: 'https://hub.docker.com/repository/docker/tfpanda97/netlify-ddns/general',
     },
     {
       media: '/mcss.webp',
