@@ -41,7 +41,7 @@ const About: FC<IProps> = ({ setInView }) => {
       </h2>
       <AnimatedText fontSize={36}>Who I Am</AnimatedText>
       <h2>
-        Software Engineer @ <span className="highlight">Laplaces AI</span>
+        Software Engineer @ <span className="highlight">Maneva AI</span>
       </h2>
       <h2>
         <span className="highlight">Computer Science Graduate </span> From the University of Toronto
